@@ -1,0 +1,67 @@
+header {
+    background-color: rgb(58, 57, 57);
+    color: white;
+    font-size: large;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#weatherDisplay {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    /*background-color: lightgrey;*/
+    border: 1px solid grey;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+h3 {
+    padding-bottom: 1rem;
+}
+
+
+h5 {
+    padding-bottom: 1rem;
+}
+
+#prevSearches {
+    padding-top: .25rem;
+    padding-left: 1rem;
+    color: grey;
+    font-size: larger;
+}
+
+
+/*
+#uvID {
+    padding: 2rem;
+    color: white;
+}
+*/
+
+#todaysDate {
+    text-align: right;
+}
+
+
+#day1, #day2, #day3, #day4, #day5 {
+    color: white;
+    background-color: rgb(112, 112, 197);
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+
+
+#fiveDayDisplay {
+    padding: 1rem;
+    border-top: 1px solid grey;
+    margin-top: 1rem;
+}
