@@ -154,7 +154,7 @@ $(document).ready(function(){
       $.ajax({
         url: "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&units=imperial&appid=b3638386ccdc592a46f56c5eaae8840b",
         type: "GET",
-        dataType: "json",
+        dataType: "jsonp",
         success: function(data){
 
             $('#todaysDate').css("visibility", "visible");
