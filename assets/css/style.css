@@ -14,16 +14,29 @@ header {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
-    /*background-color: lightgrey;*/
     border: 1px solid grey;
     border-radius: 5px;
-    visibility: hidden;
+    visibility: hidden;  
+}
+
+.fas.fa-sun{
+    font-size: 2rem;
+    color: yellow;
+}
+
+.fas.fa-cloud{
+    font-size: 2rem;
+    color: white;
+}
+
+.fas.fa-cloud-showers-heavy{
+    font-size: 2rem;
+    color: lightgray;
 }
 
 h3 {
     padding-bottom: 1rem;
 }
-
 
 h5 {
     padding-bottom: 1rem;
@@ -36,18 +49,9 @@ h5 {
     font-size: larger;
 }
 
-
-/*
-#uvID {
-    padding: 2rem;
-    color: white;
-}
-*/
-
 #todaysDate {
     text-align: right;
 }
-
 
 #day1, #day2, #day3, #day4, #day5 {
     color: white;
@@ -57,8 +61,6 @@ h5 {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
 }
-
-
 
 #fiveDayDisplay {
     padding: 1rem;

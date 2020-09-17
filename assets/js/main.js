@@ -83,6 +83,17 @@ $(document).ready(function(){
   }
   
   // Display previous searches
+
+
+
+  if (localStorage.getItem("city1")===null){
+    $("#secondCity").text("");
+  }else{
+    $("#secondCity").text(localStorage.getItem("city1"));
+  }
+
+
+
   $('#secondCity').text(localStorage.getItem('city2'));
   $('#thirdCity').text(localStorage.getItem('city3'));
   $('#fourthCity').text(localStorage.getItem('city4'));
@@ -101,6 +112,16 @@ $(document).ready(function(){
       var city1 = $('#enterCity').val();
       localStorage.setItem('city1', city1);
     }
+
+    /*
+    if($('#enterCity').val()===null){
+      localStorage.setItem('noCity', noCity);
+    }
+    */
+    //
+    
+    
+  //localStorage.setItem('city3', )
 
 
     location.reload();
@@ -139,8 +160,9 @@ $(document).ready(function(){
             $('#todaysDate').css("visibility", "visible");
             $('#weatherDisplay').css("visibility", "visible");
 
-            //var results = resultsDisplay(data)
+            
             console.log(data);
+
 
             // Date Display
             $('#todaysDate').append('<h4>'+ todaysDateDisplay +'</h4>');
@@ -148,6 +170,8 @@ $(document).ready(function(){
 
             // City Name
             fiveDayDisplay.append('<div><h3>' + data.city.name + '</h3></div>');
+
+
 
             //temp
             //console.log(data.list[0].main.temp);
@@ -166,6 +190,8 @@ $(document).ready(function(){
             var lat = data.city.coord.lat;
             var lon = data.city.coord.lon;
 
+
+            //console.log(data.list[0].weather[0].main);
 
 
               // ajax call to get uv value
@@ -204,14 +230,29 @@ $(document).ready(function(){
               // Day 1
               $('#day1').append('<h5>'+ dayDisplay +'</h5>');
               // Add if statement
-              $('#day1').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              if(data.list[4].weather[0].main == "Clear"){
+                $('#day1').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              }else if(data.list[4].weather[0].main == "Rain"){
+                $('#day1').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              }else{
+                $('#day1').append('<p id="fas"><i class="fas fa-cloud"></i></p>')
+              }
+              
               $('#day1').append('<p>Temp: '+ data.list[4].main.temp +' &#176 F</P>');
               $('#day1').append('<p>Humidity: '+ data.list[4].main.humidity +' %</P>');
 
               // Day 2
               $('#day2').append('<h5>'+ dayDisplay2 +'</h5>');
               // Add if statement
-              $('#day2').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              if(data.list[12].weather[0].main == "Clear"){
+                $('#day2').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              }else if(data.list[12].weather[0].main == "Rain"){
+                $('#day2').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              }else{
+                $('#day2').append('<p id="fas"><i class="fas fa-cloud"></i></p>')
+              }
+
+              //$('#day2').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
               $('#day2').append('<p>Temp: '+ data.list[12].main.temp +' &#176 F</P>');
               $('#day2').append('<p>Humidity: '+ data.list[12].main.humidity +' %</P>');
 
@@ -219,21 +260,45 @@ $(document).ready(function(){
               // Day 3
               $('#day3').append('<h5>'+ dayDisplay3 +'</h5>');
               // Add if statement
-              $('#day3').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              if(data.list[20].weather[0].main == "Clear"){
+                $('#day3').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              }else if(data.list[20].weather[0].main == "Rain"){
+                $('#day3').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              }else{
+                $('#day3').append('<p id="fas"><i class="fas fa-cloud"></i></p>')
+              }
+
+              //$('#day3').append('<p id="fas"><i class="fas fa-sun"></i></p>')
               $('#day3').append('<p>Temp: '+ data.list[20].main.temp +' &#176 F</P>');
               $('#day3').append('<p>Humidity: '+ data.list[20].main.humidity +' %</P>');
 
               // Day 4
               $('#day4').append('<h5>'+ dayDisplay4 +'</h5>');
               // Add if statement
-              $('#day4').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              if(data.list[28].weather[0].main == "Clear"){
+                $('#day4').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              }else if(data.list[28].weather[0].main == "Rain"){
+                $('#day4').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              }else{
+                $('#day4').append('<p id="fas"><i class="fas fa-cloud"></i></p>')
+              }
+
+              //$('#day4').append('<p id="fas"><i class="fas fa-sun"></i></p>')
               $('#day4').append('<p>Temp: '+ data.list[28].main.temp +' &#176 F</P>');
               $('#day4').append('<p>Humidity: '+ data.list[28].main.humidity +' %</P>');
 
               // Day 5
               $('#day5').append('<h5>'+ dayDisplay5 +'</h5>');
               // Add if statement
-              $('#day5').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              if(data.list[36].weather[0].main == "Clear"){
+                $('#day5').append('<p id="fas"><i class="fas fa-sun"></i></p>')
+              }else if(data.list[36].weather[0].main == "Rain"){
+                $('#day5').append('<p id="fas"><i class="fas fa-cloud-showers-heavy"></i></p>')
+              }else{
+                $('#day5').append('<p id="fas"><i class="fas fa-cloud"></i></p>')
+              }
+
+              //$('#day5').append('<p id="fas"><i class="fas fa-sun"></i></p>')
               $('#day5').append('<p>Temp: '+ data.list[36].main.temp +' &#176 F</P>');
               $('#day5').append('<p>Humidity: '+ data.list[36].main.humidity +' %</P>');
 
