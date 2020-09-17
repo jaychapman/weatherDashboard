@@ -94,10 +94,10 @@ $(document).ready(function(){
 
 
 
-  $('#secondCity').text(localStorage.getItem('city2'));
-  $('#thirdCity').text(localStorage.getItem('city3'));
-  $('#fourthCity').text(localStorage.getItem('city4'));
-  $('#fifthCity').text(localStorage.getItem('city5'));
+  //$('#secondCity').text(localStorage.getItem('city2'));
+  //$('#thirdCity').text(localStorage.getItem('city3'));
+  //$('#fourthCity').text(localStorage.getItem('city4'));
+  //$('#fifthCity').text(localStorage.getItem('city5'));
 
   // Click event to search city weather
   $('#button-addon2').click(function(){
